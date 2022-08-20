@@ -1,0 +1,122 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  background-color: var(--very-dark-blue-main);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  max-width: 350px;
+  background-color: var(--very-dark-blue-card);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 10px;
+}
+
+.card__header-img {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__header-img:hover .card__header-img-hover {
+  opacity: 1;
+  transition: .3s;
+}
+
+.card__header-img-hover {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../images/icon-view.svg");
+  background-color: hsla(178, 100%, 50%, 0.181);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card h1,
+.card__footer span {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.card h1:hover,
+.card__footer span:hover {
+  color: var(--cyan);
+  transition: .3s;
+}
+
+.card p {
+  color: var(--soft-blue);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.card__data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.card__data .item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.time {
+  color: var(--soft-blue);
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.card__footer img {
+  width: 33px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
