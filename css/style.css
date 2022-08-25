@@ -19,6 +19,16 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -50,9 +60,11 @@ img {
   cursor: pointer;
 }
 
+/* efectp en el :hover de la imagen */
+
 .card__header-img:hover .card__header-img-hover {
   opacity: 1;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .card__header-img-hover {
@@ -69,16 +81,19 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.card h1,
-.card__footer span {
+/* efecto en el :hover de la imagen */
+
+
+.card h1 a,
+.card__footer a {
   color: var(--white);
   cursor: pointer;
 }
 
-.card h1:hover,
-.card__footer span:hover {
+.card h1 a:hover,
+.card__footer a:hover {
   color: var(--cyan);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .card p {
